@@ -1,0 +1,487 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #f4f4f4;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    padding: 50px 5%;
+    background: url("background_image.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+
+.home-content {
+    flex: 1;
+    max-width: 600px;
+    color: aliceblue;
+    padding: 110px;
+    font-size: 25px;
+    text-align: left;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    margin: -3px 0;
+    font-weight: 700;
+    color: #0ef;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 1000;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+    
+}
+.home-content h3 :nth-last-of-type(2){
+    margin-bottom: 300px;
+}
+.home-content h3 span {
+    color: #0ef;
+}
+
+.home-content p {
+    font-size: 20px;
+    line-height: 1.5;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+.profile-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin-top: 50px; 
+}
+
+.profile-image img {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 10px solid rgba(255, 255, 255, 0.824);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.763);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.profile-image img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 1);
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 10%;
+    background-color: rgba(1, 4, 25, 0.781);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: rgb(240, 241, 255);
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 22px;
+    color: rgb(199, 196, 255);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 30px;
+    transition: color 0.3s, transform 0.2s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+
+}
+
+.navbar a:hover {
+    color: rgb(127, 212, 255);
+    transform: scale(1.1);
+}
+.home-sci a{
+
+display: inline-flex;
+justify-content: center;
+align-items: center;
+width: 40px;
+height: 40px;
+background: transparent;
+border: 2px solid #0ef ;
+border-radius: 50%;
+font-size: 20px;
+color: #0ef;
+text-decoration: none;
+margin: 30px 15px 30px 0;
+transition: .5s ease;
+opacity: 0;
+animation: slideLeft 1s ease forwards;
+}
+
+• home-sci a:hover 
+{ background: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 20px #0ef;}
+
+    .btn-box {
+        display: inline-block;
+        padding: 12px 28px;
+        background: #0ef;
+        border-radius: 40px;
+        font-size: 16px;
+        color: #081b29;
+        letter-spacing: 1px;
+        text-decoration: none;
+        font-weight: 600;
+        box-shadow: 0 0 5px #0ef,0 0 25px #0ef;
+        margin-top: 20px;
+    }
+    .btn-box:hover {
+        box-shadow: 0 0 5px rgba(100, 175, 255, 0.663), 
+                    0 0 25px rgba(100, 175, 255, 0.663), 0 0 50px rgba(100, 157, 255, 0.166), 
+                    0 0 100px rgba(100, 175, 255, 0.663), 0 0 200px rgba(100, 157, 255, 0.166);
+    }
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity:0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity:1;
+    }
+}
+
+@keyframes slideLeft{
+    0%{
+        transform: translateX(100px);
+        opacity:0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity:1;
+    }
+}
+
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity:0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity:1;
+    }
+}
+@keyframes slideBottom{
+    0%{
+        transform: translateY(-100px);
+        opacity:0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity:1;
+    }
+}
+
+
+
+.about {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: url("background_image.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 5%;
+    min-height: 100vh;
+}
+
+.about-container {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 60px;
+    border-radius: 10px;
+    color: rgb(234, 238, 242);
+    background-color: rgba(9, 23, 61, 0.85);
+    font-size: 22px;
+    box-shadow: 0 0 20px rgba(0, 238, 255, 0.5);
+    text-align: left;
+}
+
+.about-container h1, .about-container h2 {
+    text-align: left;
+    color: rgb(40, 89, 180);
+    font-size: 28px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.about-container p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 0.7s;
+}
+
+.skills {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: url("background_image.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    flex-wrap: wrap;
+    padding: 50px 5%;
+    min-height: 100vh;
+}
+
+.skills-container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 80px;
+    border-radius: 10px;
+    color: rgb(234, 238, 242);
+    background-color: rgba(9, 23, 61, 0.85);
+    font-size: 25px;
+    box-shadow: 0 0 20px rgba(0, 238, 255, 0.5);
+}
+
+.skills-container h1 {
+    text-align: left;
+    color: rgb(40, 89, 180);
+    line-height: 1.0;
+    font-size: 36px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.skill-category {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 0.7s;
+}
+
+.skill-category h2 {
+    font-size: 24px;
+    color: #0ef;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 0.7s;
+}
+
+.skill-category p {
+    font-size: 20px;
+    line-height: 1.5;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 0.7s;
+}
+
+.projects {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: url("background_image.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 5%;
+    min-height: 100vh;
+}
+
+.projects-container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 80px;
+    border-radius: 10px;
+    color: rgb(234, 238, 242);
+    background-color: rgba(9, 23, 61, 0.85);
+    font-size: 25px;
+    box-shadow: 0 0 20px rgba(0, 238, 255, 0.5);
+}
+
+.projects-container h1 {
+    text-align: left;
+    color: rgb(40, 89, 180);
+    font-size: 36px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.project {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 0.7s;
+}
+
+.project h2 {
+    font-size: 24px;
+    color: #0ef;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 0.7s;
+}
+
+.project p {
+    font-size: 20px;
+    line-height: 1.5;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 0.7s;
+}
+
+.contact {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: url("background_image.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 5%;
+    min-height: 100vh;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 60px;
+    border-radius: 10px;
+    color: rgb(234, 238, 242);
+    background-color: rgba(9, 23, 61, 0.85);
+    font-size: 22px;
+    box-shadow: 0 0 20px rgba(0, 238, 255, 0.5);
+    text-align: left;
+}
+
+.contact-container h1 {
+    text-align: center;
+    color: rgb(40, 89, 180);
+    font-size: 36px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.contact-info p {
+    font-size: 20px;
+    margin: 10px 0;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 0.7s;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.contact-form label {
+    font-size: 18px;
+    margin-top: 10px;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 0.7s;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 16px;
+    outline: none;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 0.7s;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: #0ef;
+    border: none;
+    border-radius: 40px;
+    font-size: 18px;
+    color: #081b29;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+    transition: 0.3s;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.contact-form button:hover {
+    box-shadow: 0 0 10px #0ef, 0 0 40px #0ef, 0 0 80
+}
