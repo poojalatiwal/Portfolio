@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Script loaded");
 
-    // Typed.js animation
+
     const typedElement = document.querySelector(".text");
     if (typedElement) {
         new Typed(".text", {
