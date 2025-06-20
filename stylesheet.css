@@ -266,6 +266,7 @@ animation: slideLeft 1s ease forwards;
 }
 
 .skills {
+    margin-top: 50px;
     text-align: left;
     display: flex;
     align-items: center;
@@ -284,7 +285,7 @@ animation: slideLeft 1s ease forwards;
     max-width: 800px;
     margin: auto;
     background: white;
-    padding: 80px;
+    padding: 40px;
     border-radius: 10px;
     color: rgb(234, 238, 242);
     background-color: rgba(9, 23, 61, 0.85);
@@ -301,7 +302,9 @@ animation: slideLeft 1s ease forwards;
     animation: slideRight 1s ease forwards;
     animation-delay: 1s;
 }
-
+.skill-category:first-of-type {
+    margin-top: 20px;
+}
 .skill-category {
     margin-bottom: 20px;
     padding: 15px;
