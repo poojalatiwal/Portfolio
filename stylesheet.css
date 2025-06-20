@@ -15,6 +15,7 @@ body {
 }
 
 .home {
+    margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -26,6 +27,13 @@ body {
     background-size: cover;
     background-position: center;
     min-height: 100vh;
+}
+
+.home-intro {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: #e6f0ff;
 }
 
 
@@ -93,71 +101,85 @@ body {
     box-shadow: 0 0 50px rgba(255, 255, 255, 1);
 }
 
-
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 15px 10%;
-    background-color: rgba(1, 4, 25, 0.781);
+    background-color: rgba(0, 10, 30, 0.92); /* darker, richer tone */
+    backdrop-filter: blur(10px); /* adds soft blur */
+    box-shadow: 0 0 15px rgba(0, 238, 255, 0.15); /* subtle glowing effect */
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    border-bottom: 1px solid rgba(0, 238, 255, 0.1); /* thin neon line */
 }
 
 .logo {
-    font-size: 25px;
-    color: rgb(240, 241, 255);
+    font-size: 28px;
+    color: #0ef; /* bright cyan for logo */
     text-decoration: none;
-    font-weight: 600;
-    cursor: default;
+    font-weight: 700;
+    cursor: pointer;
     opacity: 0;
     animation: slideRight 1s ease forwards;
 }
 
 .navbar a {
-    display: inline-block;
-    font-size: 22px;
-    color: rgb(199, 196, 255);
+    font-size: 20px;
+    color: #d6faff; /* brighter soft white-blue */
     text-decoration: none;
     font-weight: 500;
     margin-left: 30px;
     transition: color 0.3s, transform 0.2s;
     opacity: 0;
     animation: slideTop .5s ease forwards;
-
 }
 
 .navbar a:hover {
-    color: rgb(127, 212, 255);
+    color: #0ef; /* bright neon on hover */
     transform: scale(1.1);
 }
-.home-sci a{
 
-display: inline-flex;
-justify-content: center;
-align-items: center;
-width: 40px;
-height: 40px;
-background: transparent;
-border: 2px solid #0ef ;
-border-radius: 50%;
-font-size: 20px;
-color: #0ef;
-text-decoration: none;
-margin: 30px 15px 30px 0;
-transition: .5s ease;
-opacity: 0;
-animation: slideLeft 1s ease forwards;
-}
-
-• home-sci a:hover 
-{ background: #0ef;
-    color: #081b29;
-    box-shadow: 0 0 20px #0ef;}
-
+/* Style for the social icons container */
+.home-sci {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Style each icon link */
+  .home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background: #0077cc; /* Default icon background (can be different per icon) */
+    color: white;
+    font-size: 24px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s ease;
+  }
+  
+  /* Hover effect */
+  .home-sci a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Optional: Customize each platform's background */
+  .home-sci a:nth-child(1) {
+    background: #0077b5; /* LinkedIn blue */
+  }
+  
+  .home-sci a:nth-child(2) {
+    background: #25D366; /* WhatsApp green */
+  }
+  
     .btn-box {
         display: inline-block;
         padding: 12px 28px;
@@ -222,6 +244,7 @@ animation: slideLeft 1s ease forwards;
 
 
 .about {
+    margin-top: 50px;
     text-align: left;
     display: flex;
     align-items: center;
@@ -264,7 +287,45 @@ animation: slideLeft 1s ease forwards;
     animation: slideLeft 1s ease forwards;
     animation-delay: 0.7s;
 }
+.about-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 1s;
+}
+/* Primary Button (subtle glow) */
+.btn-primary {
+    background-color: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 5px rgba(0, 238, 255, 0.4), 0 0 15px rgba(0, 238, 255, 0.3);
+    transition: 0.3s ease;
+}
 
+.btn-primary:hover {
+    background-color: #38f1ff;
+    color: #081b29;
+    box-shadow: 0 0 10px rgba(56, 241, 255, 0.5), 0 0 20px rgba(56, 241, 255, 0.4);
+}
+
+/* Secondary Button (light outline, soft hover) */
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #0ef;
+    color: #0ef;
+    box-shadow: none;
+    transition: 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(14, 239, 255, 0.1);
+    color: #0ef;
+    box-shadow: 0 0 8px rgba(0, 238, 255, 0.3);
+}
+
+
+  
 .skills {
     margin-top: 50px;
     text-align: left;
@@ -332,6 +393,7 @@ animation: slideLeft 1s ease forwards;
 }
 
 .projects {
+    margin-top: 50px;
     text-align: left;
     display: flex;
     align-items: center;
@@ -373,6 +435,9 @@ animation: slideLeft 1s ease forwards;
     animation: slideLeft 1s ease forwards;
     animation-delay: 0.7s;
 }
+.project :first-of-type {
+    margin-top: 20px;
+}
 
 .project h2 {
     font-size: 24px;
@@ -392,6 +457,7 @@ animation: slideLeft 1s ease forwards;
 }
 
 .contact {
+    margin-top: 50px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -424,8 +490,8 @@ animation: slideLeft 1s ease forwards;
     opacity: 0;
     animation: slideRight 1s ease forwards;
     animation-delay: 1s;
+    margin-bottom: 20px; /* ✅ Add this line */
 }
-
 .contact-info p {
     font-size: 20px;
     margin: 10px 0;
