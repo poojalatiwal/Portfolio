@@ -15,6 +15,7 @@ body {
 }
 
 .home {
+    padding-top: 100px;
     margin-top: 50px;
     display: flex;
     align-items: center;
@@ -559,6 +560,7 @@ body {
   .home {
     flex-direction: column;
     padding: 30px 5%;
+    padding-top: 120px;
     text-align: center;
   }
 
